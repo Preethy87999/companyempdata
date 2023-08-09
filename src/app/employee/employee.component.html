@@ -1,0 +1,40 @@
+<p>employee works!</p>
+<body>
+    <div class="container">
+        <div class="form-area">
+    <form > 
+        <div>
+            <label >Full Name</label>
+            <input type="text" name="fullname" class="form-control" placeholder="name" formControlName='fullname'>
+
+            <div class="alert alert-danger" *ngIf="fullname.touched && fullname.invald">
+                <div *ngIf="fullname.errors?.required">The Full Name is required..</div>
+                <div *ngIf="fullname.errors?.minlength">The Full Name must be atleast 5 letters long..</div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <label >EmpId</label>
+            <input type="text" name="empid" class="form-control" placeholder=" 000"  formControlName='empid'>
+        </div>
+        <br><br>
+        <div>
+            <label >Address</label>
+            <input type="text" name="city" id="city" class="form-control" formControlName='address'>
+        </div>
+        <br><br>
+        <div>
+            <label >DOJ</label>
+            <input type="text" name="doj" class="form-control" placeholder="dd-mm-yyyy" formControlName='doj'>
+        </div>
+        <br>
+        <div>
+            <label>Salary</label>
+            <input type="text" name="salary" class="form-control" formControlName='salary'>
+        </div>
+        <br><br>
+       <button type="button" class="btn btn-primary" >ADD</button>&nbsp;
+       <button type="button" class="btn btn-primary" >reset</button>
+    </form>
+    </div>
+</div>
